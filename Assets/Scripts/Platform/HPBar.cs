@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HPBar : MonoBehaviour
 {
@@ -16,5 +17,10 @@ public class HPBar : MonoBehaviour
     void Update()
     {
         GetComponent<TextMesh>().text = HP.ToString() + "/1000";
+
+        if (HP <= 0)
+        {
+            SceneManager.LoadScene("HomePage");
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject asteroidPrefab;
+    public GameObject Mob;
     public float respawnTime = 1.0f;
     private Vector2 screenBounds;
 
@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     }
     private void spawnEnemy()
     {
-        GameObject a = Instantiate(asteroidPrefab) as GameObject;
+        GameObject a = Instantiate(Mob) as GameObject;
         a.transform.position = new Vector2(transform.position.x, transform.position.y);
     }
     IEnumerator enemyWave()

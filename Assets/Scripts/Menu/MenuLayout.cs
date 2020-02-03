@@ -12,21 +12,21 @@ public class MenuLayout : MonoBehaviour
         float buttonSizeX = StartButton.GetComponent<RectTransform>().rect.width;
         float buttonSizeY = StartButton.GetComponent<RectTransform>().rect.height;
 
-        StartButton.transform.position = new Vector3(Screen.width - buttonSizeX/2, buttonSizeY/2, 0);
+        StartButton.transform.position = new Vector3(Screen.width - buttonSizeX, buttonSizeY, 0);
 
         GameObject OptionsButton = GameObject.Find("Options");
 
         buttonSizeX = OptionsButton.GetComponent<RectTransform>().rect.width;
         buttonSizeY = OptionsButton.GetComponent<RectTransform>().rect.height;
 
-        OptionsButton.transform.position = new Vector3(Screen.width - buttonSizeX / 2, Screen.height - buttonSizeY / 2, 0);
+        OptionsButton.transform.position = new Vector3(Screen.width - buttonSizeX, Screen.height - buttonSizeY, 0);
 
         GameObject ConfigButton = GameObject.Find("Configure");
 
         buttonSizeX = ConfigButton.GetComponent<RectTransform>().rect.width;
         buttonSizeY = ConfigButton.GetComponent<RectTransform>().rect.height;
 
-        ConfigButton.transform.position = new Vector3(buttonSizeX / 2, buttonSizeY / 2, 0);
+        ConfigButton.transform.position = new Vector3(buttonSizeX, buttonSizeY, 0);
     }
 
     // Update is called once per frame

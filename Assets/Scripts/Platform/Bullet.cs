@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 40.0f;
     private Rigidbody2D rb;
     private Vector2 screenBounds;
 
@@ -21,5 +21,10 @@ public class Movement : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
+
+        if (!this.GetComponent<Renderer>().isVisible)
+        {
+            Object.Destroy(this.gameObject);
+        }
     }
 }
